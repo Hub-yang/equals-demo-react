@@ -1,35 +1,51 @@
 {
-  "name": "init-template",
+  "name": "vite-project",
   "type": "module",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "private": true,
-  "packageManager": "pnpm@10.28.2",
-  "description": "",
-  "author": "HuberyYang",
-  "license": "MIT",
-  "homepage": "",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Hub-yang/**.git"
-  },
-  "bugs": {
-    "url": "https://github.com/Hub-yang/**/issues"
-  },
-  "keywords": [
-    "template"
-  ],
-  "engines": {
-    "node": "^20.19.0 || >=22.12.0"
-  },
   "scripts": {
-    "lint": "eslint",
-    "lint:fix": "eslint --fix",
-    "taze": "npx taze major -r",
-    "license:mit": "npx license MIT",
-    "release": "bumpp && npm publish",
-    "commitlint:init": "npx hubery commitlint-init"
+    "dev": "vite --open",
+    "build": "tsc -b && vite build",
+    "lint": "eslint .",
+    "preview": "vite preview",
+    "prepare": "husky",
+    "commitlint": "commitlint --edit"
+  },
+  "dependencies": {
+    "@unocss/reset": "^66.6.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
   },
   "devDependencies": {
-    "@huberyyang/todo-scripts": "latest"
+    "@antfu/eslint-config": "^7.4.3",
+    "@commitlint/cli": "^20.4.2",
+    "@commitlint/config-conventional": "^20.4.2",
+    "@eslint-react/eslint-plugin": "^2.13.0",
+    "@eslint/js": "^9.39.1",
+    "@huberyyang/todo-scripts": "^1.0.9",
+    "@types/node": "^24.10.1",
+    "@types/react": "^19.2.7",
+    "@types/react-dom": "^19.2.3",
+    "@unocss/eslint-plugin": "^66.6.0",
+    "@unocss/transformer-attributify-jsx": "^66.6.0",
+    "@vitejs/plugin-react": "^5.1.4",
+    "eslint": "^9.39.1",
+    "eslint-plugin-react-hooks": "^7.0.1",
+    "eslint-plugin-react-refresh": "^0.4.24",
+    "globals": "^16.5.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.2.7",
+    "typescript": "~5.9.3",
+    "typescript-eslint": "^8.48.0",
+    "unocss": "^66.6.0",
+    "vite": "^8.0.0-beta.13"
+  },
+  "pnpm": {
+    "overrides": {
+      "vite": "^8.0.0-beta.13"
+    }
+  },
+  "lint-staged": {
+    "*": "eslint . --fix"
   }
 }
