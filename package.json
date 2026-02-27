@@ -6,8 +6,9 @@
   "scripts": {
     "dev": "vite --open",
     "build": "tsc -b && vite build",
-    "lint": "eslint .",
     "preview": "vite preview",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
     "prepare": "husky",
     "commitlint": "commitlint --edit"
   },
@@ -23,6 +24,9 @@
     "@eslint-react/eslint-plugin": "^2.13.0",
     "@eslint/js": "^9.39.1",
     "@huberyyang/todo-scripts": "^1.0.9",
+    "@iconify-json/carbon": "^1.2.18",
+    "@iconify-json/ic": "^1.2.4",
+    "@iconify-json/mdi": "^1.2.3",
     "@types/node": "^24.10.1",
     "@types/react": "^19.2.7",
     "@types/react-dom": "^19.2.3",
