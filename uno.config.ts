@@ -1,5 +1,3 @@
-import transformerAttributifyJsx from '@unocss/transformer-attributify-jsx'
-
 // uno.config.ts
 import {
   defineConfig,
@@ -8,6 +6,7 @@ import {
   presetTypography,
   presetWind3,
   presetWind4,
+  transformerAttributifyJsx,
 } from 'unocss'
 
 export default defineConfig({
