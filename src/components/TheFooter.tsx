@@ -8,8 +8,8 @@ export default function TheFooter() {
   }
   return (
     <>
-      <nav flex="~ justify-center items-center" mt5 w-full gap-2 text-xl>
-        <button icon-btn>
+      <nav className="text-xl mt5 flex gap-2 w-full items-center justify-center">
+        <button>
           <div i-carbon-sun dark:i-carbon-moon onClick={onToggleTheme} />
         </button>
 
